@@ -1,0 +1,9 @@
+[0m[0KMicrosoft Windows [Version 10.0.17134.523][0K[?25l
+(c) 2018 Microsoft Corporation. All rights reserved.[0K
+[0K
+C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25hg[0Ki[0Kt[0K[56G[55G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>gi[0K[?25h[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>g[0K[?25h[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25he[0Km[0Ka[0Kc[0K[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>ema[0K[?25h[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>em[0K[?25h[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>e[0K[?25h[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25hg[0Ki[0Kt[0K[56G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git a[0K[?25hd[0Kd[0K[60G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git add .[0K[?25hg[0Kit[0Ki[0Kgnore[0K]0;  - git  add .gitignore[?25l
+[0K[?25h]0; [?25l
+C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25hg[0Ki[0Kt[0K[56G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[63G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -[0K[?25hm[0K[66G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -m '[0K[?25hu[0Kp[0Kd[0Ka[0Kt[0Ke[0K[74G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -m 'update g[0K[?25hi[0Kt[0K[78G[77G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -m 'update giti[0K[?25hg[0Kn[0Ko[0Kr[0Ke[0K'[0K]0;  - git  commit -m 'update gitignore'[?25l
+error: pathspec 'gitignore'' did not match any file(s) known to git[0K
+[0K[?25h]0; [?25l
+C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25h
