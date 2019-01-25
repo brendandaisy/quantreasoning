@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1547672823885.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "91FD2B0D",
+    "lastKnownWriteTime" : 1547679586,
+    "last_content_update" : 1547679586878,
+    "path" : "~/phd/quantreasoning/hw1.R",
+    "project_path" : "hw1.R",
+    "properties" : {
+        "cursorPosition" : "23,53",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
