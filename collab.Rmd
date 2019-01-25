@@ -1,0 +1,6 @@
+---
+title: "collab"
+output: html_document
+---
+
+A collaboration!
