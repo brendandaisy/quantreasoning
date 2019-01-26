@@ -6,4 +6,20 @@ C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25hg[0Ki[0Kt[0K[56
 C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25hg[0Ki[0Kt[0K[56G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[63G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -[0K[?25hm[0K[66G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -m '[0K[?25hu[0Kp[0Kd[0Ka[0Kt[0Ke[0K[74G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -m 'update g[0K[?25hi[0Kt[0K[78G[77G[?25lC:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -m 'update giti[0K[?25hg[0Kn[0Ko[0Kr[0Ke[0K'[0K]0;  - git  commit -m 'update gitignore'[?25l
 error: pathspec 'gitignore'' did not match any file(s) known to git[0K
 [0K[?25h]0; [?25l
-C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25h
+C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25h[?25l[5AC:\Users\brendandaisy\Documents\phd\quantreasoning>git add .giti[0Kg
+nore[0K
+[0K
+C:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -m[0K
+'update gitignore'[0K
+error: pathspec 'gitignore'' did not match any file(s) known to [0Kg
+it[0K
+[0K
+C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K[?25h[?25l[8AC:\Users\brendandaisy\Documents\phd\quantreasoning>git add .gitignore[0K
+[0K
+C:\Users\brendandaisy\Documents\phd\quantreasoning>git commit -m 'update gitignore'[0K
+error: pathspec 'gitignore'' did not match any file(s) known to git[0K
+[0K
+C:\Users\brendandaisy\Documents\phd\quantreasoning>[0K
+[0K
+[0K
+[0K[3A[52G[?25h
