@@ -1,0 +1,136 @@
+---
+title: "Problem Set 2"
+author: "Brendan Case"
+documentclass: article
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. Exponential growth in cancer
+
+The growth of the cancer cell follows the formula for exponential growth:
+
+$$N_{t+1} = 2 N_{t},$$
+
+where $t$ is a timestep of 109 days. If $N_0 = 1$, then the above equation simplifies to $N_{t+1} = 2^{t}$ and we must solve
+
+$$10^{12} = 2^{t_{crit}},$$
+
+or
+
+$$t_{crit} = \log_2(10^{12}),$$
+
+which is `r log(10^(12), 2)`. Since a time-step is 109 days, the number of days until the critical value is roughly $109\cdot 40=`r 109 * 40`$. 
+
+## 2. Sterile insect release
+
+Let
+
+$$F(N) = b \frac{N}{N + M} - d.$$
+
+Throughout this section, I will suppose $b, d$, and $M$ are non-negative. Further, population levels of $N$ below zero we consider to be simply extinct (stuck at 0).
+
+### *Equilibrium points and stability*
+
+I will write the equilibrium points as $N^*$, i.e., we seek solutions to the equation
+$F(N^*) = 0$. Solving this for $N^*$, we see that
+
+\begin{equation*}
+  N^* = \begin{cases}
+    0, & \text{when $b = d$}\\
+    \frac{d}{b - d}M & \text{otherwise.}
+  \end{cases}
+\end{equation*}
+
+Note that these cases do not indicate there are two equilibrium points.
+
+Further, since applying the quotient rule for $f(N) = N$ and $g(N) = N + M$ quickly gives $\frac{\text{d}F}{\text{d}N} = b\frac{M}{(N+M)^2} > 0$, and we know from class that $N^*$ is stable if and only if $\frac{\text{d}F}{\text{d}N} < 0$, $N^*$ is unstable for any parameter setting.
+
+Finally, for completeness I should point out that by assuming that if $N$ has crashed to less than or equal to 0, $N$ will stay at 0, I have effectively insisted that $N*=0$ is a stable equilibrium point.
+
+### *Critical threshold for population extinction*
+
+Since from the previous section we know values of $N$ above $N^*$ will continue to grow away from $N^*$, to demonstrate that $N^*$ is the critical threshold it remains to show values of $N$ below $N^*$ will be attracted to 0. However, this immediate after noting $N/(N + M)$, and hence $F$, is strictly monotone increasing:
+
+```{r}
+X = 1:100
+Y1 = X/(X + 1)
+Y2 = X/(X + 500)
+plot(X, Y1, ylim=c(0, 1), ylab="N/(N+M)", xlab="N")
+points(X, Y2)
+```
+
+This can be proven after noting the first derivative of $N/(N+M)$ is clearly non-negative.
+
+Since $F$ is strictly monotone, this means
+
+$$F(N) < F(N^*) = 0$$
+
+for $0 \leq N < N^*$, so $N$ will always decrease toward 0 in this case.
+
+In summary, this model leads to a strong Allee effect:
+
+```{r}
+Y3 = 2.4 * X/(X + 50) - .5
+plot(X, Y3, xlab="N", ylab="F")
+abline(h=0)
+```
+
+As can be seen, $F$ scales with population size $N$ such that if $N$ is below the critical value, the population will crash, but past this value, growth will increase further as $N$ increases. 
+
+<!-- In particular, when $N$ is rather small (close to 0), $N$ must be increasing since $N^*=0$ is not stable. Similarly, if $N < \frac{d}{b - d}M$ then the population will be decreasing, and increasing when $N > \frac{d}{b - d}M$. Therefore, $\frac{d}{b - d}M$ is the critical threshold for determining extinction. The population of female mosquitoes is subject to a strong Allee effect in this model. -->
+
+## 3. Sterile insect release with competition
+
+```{r, message=F}
+require(deSolve)
+times <- seq(0,500,by=0.1)
+
+# Parameters
+params <- c(b = 2.4,c=0.02,M=50,d=0.2)
+
+# Model
+sterile_insect <- function(t,state,parameters){
+  with(as.list(c(state,parameters)),{
+    if (N <= 0) {
+      dN = 0
+    }
+    else {
+      dN <- b*N/(N+M) - d - c*N
+    }
+    return(list(c(dN)))})
+}
+```
+
+To answer this question, I will first vary the initial $N_0$ and then plot the last 10 values of $N$ after 5,000 timesteps. 
+
+```{r}
+plot(1, type="n", xlab="initial value N0", ylab="final values N", xlim=c(0, 200), ylim=c(0, 55))
+for (n in seq(6, 200, by=1)) {
+  out <- ode(y = c(N=n), times=times, func=sterile_insect, parms=params)
+  points(x=rep(n, 10), y=tail(out[,2], 10))
+}
+```
+
+This suggests there are three equilibrium points at $N^*=0, 10, 50$ for these particular parameter settings. Further, since for $N_0 < 10$ and $N_0 > 50$ the model was attracted to the points $0$ and $50$ respectively, the points $0$ and $50$ are stable, while $10$ is not.
+
+```{r}
+diff_eq = function(N) {
+  return(params[1] * (N/(N + params[3])) - params[4] - params[2] * N)
+}
+
+X = 0:100
+Y = diff_eq(0:100)
+plot(X, Y,
+     xlim=c(0, 100), 
+     xlab="N",
+     ylab="dN",
+     pch=ifelse(X %in% c(0, 50), 19, 1), 
+     cex=1.6)
+```
+
+
