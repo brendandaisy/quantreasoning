@@ -1,0 +1,59 @@
+---
+title: Tidyverse Lesson Plan
+author: Brendan Case
+---
+
+The goal of this lesson will be to extend the students' experience
+with `dplyr` and `ggplot` to include some of the many other useful
+features from the tidyverse package. 
+
+## Topics Covered
+
+The lecture will be roughly split in to 2 main sections of live coding:
+
+1. Overview of packages and functions. This section will introduce the
+   packages `purrr`, `stringr`, and `forcats`, and give basic examples
+   of some of the cool functions of each.
+   
+2. Example problems and random hacks. To see some examples of
+   start-to-finish R programming within the tidyverse syntax, we will
+   work through several data processing and visualization tasks. Along
+   the way, we will use some of the functions covered in the previous
+   section, and get a sense of the overriding theme of the tidyverse:
+   for everything we are used to doing in R, there is a corresponding
+   function from the tidyverse which is less silent and more
+   consistent. In addition, I will share some useful procedures that
+   can be solved with tidyverse functions, such as giving graphs
+   complex labels and defining a color palette which maps colors to
+   variables across many figures.
+
+## Expected Outcomes
+
+To have a working understanding of the high-level use of each package
+in the tidyverse, and a few useful scripts to refer to when coding.
+
+## Assessment
+
+While I do not plan on asking "what should I type next?" type
+questions, I will open the class up to discussion about common
+frustrations when programming and whether there are particular
+questions they would like me to discuss.
+
+## Learning Plan
+
+Students will be expected to come to class able to load the packages `tidyverse` and `wesanderson`.
+
+The students will be encouraged to keep up with the live coding, and
+will be referred to several helpful resources for further reading,
+exercises, and cheat sheets to keep handy.
+
+## Reflection
+
+Eventual reflection on the following questions:
+
+1. Based on vibe/feedback, how did students feel the content aided
+   their understanding of the tidyverse and programming best
+   practices?
+
+2. How was the use of time? Did the live coding take longer than
+   anticipated?
