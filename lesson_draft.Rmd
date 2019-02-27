@@ -39,8 +39,11 @@ questions, I will open the class up to discussion about common
 frustrations when programming and whether there are particular
 questions they would like me to discuss.
 
-## Learning Plan
+In addition, I may ask the class high-level questions, for example
+about how certain tidyverse verbs relate to each other. This will
+encourage the type of thought that goes in to writing tidy code.
 
+## Learning Plan
 Students will be expected to come to class able to load the packages `tidyverse` and `wesanderson`.
 
 The students will be encouraged to keep up with the live coding, and
